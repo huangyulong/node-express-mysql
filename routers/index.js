@@ -4,10 +4,11 @@ const mysql = require('mysql')
 const querysql = require('../mysql')
 
 router.all('*', function(req, res, next) {
-    // res.send('use router ')
+    // 用来进行跨域设置的  
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
     res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+    // 该方法中可以进行拦截
     console.log('拦截成功')
     next()
 })

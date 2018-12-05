@@ -1,3 +1,5 @@
+// 简单封装一个mysql的查询方法
+
 const mysql = require('mysql')
 
 function query(sql, fn) {
